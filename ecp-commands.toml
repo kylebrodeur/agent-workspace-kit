@@ -1,0 +1,32 @@
+# agent-workspace-kit mounts as `ecp team`: specific operations, not a
+# whole-surface passthrough (this kit has no bundled CLI binary surface
+# beyond four fixed commands). A manifest declares EITHER [[command]]
+# entries OR a [passthrough] table, never both.
+
+[[command]]
+name = "check"
+summary = "Preflight the team manifest against disk (read-only)"
+kind = "shell"
+argv = ["node", "bin/teamctl.mjs", "check"]
+passthrough = true
+
+[[command]]
+name = "layout"
+summary = "Render the team's Zellij layout for the selected roles"
+kind = "shell"
+argv = ["node", "bin/teamctl.mjs", "layout"]
+passthrough = true
+
+[[command]]
+name = "run"
+summary = "Run one role's terminal loop without panes"
+kind = "shell"
+argv = ["node", "bin/teamctl.mjs", "run"]
+passthrough = true
+
+[[command]]
+name = "start"
+summary = "Preflight, then attach-or-create the team's Zellij session"
+kind = "shell"
+argv = ["node", "bin/teamctl.mjs", "start"]
+passthrough = true

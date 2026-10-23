@@ -1,0 +1,38 @@
+# agent-workspace-kit: the doc map for agents
+
+## This repo
+
+- [docs/quickstart.md](docs/quickstart.md): the numbered path from
+  nothing to a validated team and a generated layout, all commands
+  copy-pasteable.
+- [docs/how-to.md](docs/how-to.md): day-to-day operation, grouped by
+  task: adding roles, selecting and resetting lanes, sentinels, running
+  without panes, mounting as `ecp team`.
+- [docs/RUNBOOK.md](docs/RUNBOOK.md): the operator's reference: the full
+  command surface, every manifest key, every error string with its fix,
+  recovery procedures.
+- [AGENTS.md](AGENTS.md): the boundary as rules an agent obeys.
+- [CONTRIBUTING.md](CONTRIBUTING.md): setup, tests, the prose gate, the
+  change bar.
+- [SECURITY.md](SECURITY.md): vulnerability reporting, scope.
+- skills/agent-workspace-kit/SKILL.md: the skill form of the boundary.
+- [examples/run-demo.sh](examples/run-demo.sh): the runnable example
+  (validates the demo team and prints its layouts; output captured in
+  [examples/README.md](examples/README.md)).
+
+## The family (AI ECP)
+
+- the family catalog (the map home; in the private control-plane repo).
+- repo-guards: governance kit (gates, hooks, CI shape).
+- actions-runner: the deterministic agent-pipeline runner.
+- omp-rpc-cli: persistent omp RPC sessions (the mode A half; this kit is
+  the mode B half; each can use the other).
+- ecp-toolkit: the control plane CLI.
+- docs-policy-kit, op-safe: docs and secrets kits.
+- The family's documentation standard (in the private control-plane repo).
+- The agent-team subsystem design this kit implements (in the private
+  control-plane repo).
+- pi-link: the multi-terminal coordination dependency (its own repo; its
+  --team-check rules are the manifest contract this kit mirrors).
+
+Verified 2026-10-22.
