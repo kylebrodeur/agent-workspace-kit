@@ -1,0 +1,14 @@
+# Node
+node_modules/
+
+# Local run state produced by `teamctl start` and `teamctl run` (sessions,
+# generated layouts, per-role prompts). Never shipped, never committed.
+.agent-workspace/
+
+# Test scratch sandboxes that run inside the repo
+tests/.sandbox/
+examples/.sandbox/
+
+# OS noise
+.DS_Store
+*.log
