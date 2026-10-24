@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "team": { "name": "example-team", "group": "example-team" },
+  "hub": { "role": "planner", "mode": "designated" },
+  "roles": {
+    "planner": {
+      "role": "Coordinator",
+      "profile": ".pi-link/profiles/planner.md",
+      "model": "example-model-small",
+      "cwd": ".",
+      "sessionDir": "sessions/planner",
+      "linkName": "planner",
+      "firstTurn": "Read the team rules in RULES.md before dispatching any work.",
+      "skills": { "required": [] },
+      "tools": { "required": ["read", "link_list", "link_send"] }
+    },
+    "builder": {
+      "role": "Builder",
+      "profile": ".pi-link/profiles/builder.md",
+      "model": "example-model-large",
+      "cwd": ".",
+      "sessionDir": "sessions/builder",
+      "linkName": "builder",
+      "args": ["--no-lsp"],
+      "skills": { "optional": ["team-workflow"] },
+      "tools": { "required": ["read"] }
+    }
+  }
+}

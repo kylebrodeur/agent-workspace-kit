@@ -1,0 +1,43 @@
+{
+  "name": "agent-workspace-kit",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Manifest-driven multi-agent workspace launcher: one team.json describes the team, and the launcher validates it and runs one agent per pane in a Zellij layout.",
+  "keywords": [
+    "agents",
+    "zellij",
+    "multi-agent",
+    "team",
+    "manifest",
+    "launcher",
+    "omp"
+  ],
+  "license": "Apache-2.0",
+  "author": "AI ECP <kylebrodeur>",
+  "homepage": "https://github.com/kylebrodeur/agent-workspace-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylebrodeur/agent-workspace-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kylebrodeur/agent-workspace-kit/issues"
+  },
+  "bin": {
+    "teamctl": "./bin/teamctl.mjs"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md",
+    "LICENSE",
+    "ecp-commands.toml"
+  ],
+  "scripts": {
+    "start": "node bin/teamctl.mjs",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "prose-gate": "sh scripts/prose-gate.sh"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
