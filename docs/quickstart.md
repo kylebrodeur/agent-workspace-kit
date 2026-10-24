@@ -131,8 +131,16 @@ next run fresh.
 
 ## What is PLANNED (not shipped)
 
-The npm global install (`npm i -g agent-workspace-kit`) and the first
-release tag. Everything above runs today from a checkout.
+**The npm global install is PLANNED, and it is not on npm yet.** The
+kit installs from GitHub at a tag in the meantime:
+
+```bash
+npm i -g "github:kylebrodeur/agent-workspace-kit#v0.1.0"
+```
+
+Everything above runs today from a checkout. The family's one registry
+entry is the control plane, `ecp-toolkit`; see the family's distribution
+policy.
 
 ## Where next
 
