@@ -97,13 +97,15 @@ node bin/teamctl.mjs layout --root my-team
 
 ```text
 layout {
-        pane name="planner" command="node" cwd="<abs-path-to-my-team>" focus=true {
+        pane name="planner: Coordinator" command="node" cwd="<abs-path-to-my-team>" focus=true {
             args "<abs-path-to-kit>/bin/teamctl.mjs" "run" "planner"
         }
 }
 ```
 
-The hub pane carries `focus=true` because the manifest names the hub.
+The hub pane carries `focus=true` because the manifest names the hub,
+and the pane's name carries the role's title from the manifest
+(`planner: Coordinator`).
 `--out FILE` writes the KDL instead of printing it.
 
 ## 5. Start the session

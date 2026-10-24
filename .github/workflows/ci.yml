@@ -12,7 +12,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          # The node floor is the package's own: "engines": { "node":
+          # ">=24" }. The family standard is the same, and a CI that
+          # runs an OLDER node than the package declares is testing a
+          # runtime the package refuses to install on.
+          node-version: "24"
       - name: Test suite
         run: npm test
 

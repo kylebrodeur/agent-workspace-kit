@@ -20,6 +20,7 @@ const ROOT = "/repo";
 const BIN = "/repo/node_modules/.bin/teamctl.mjs";
 
 test("a single role renders one pane with no wrapper", () => {
+  // "builder" is NOT the hub in CONFIG, so its pane carries no focus.
   const kdl = renderLayout(ROOT, BIN, { roles: ["builder"], config: CONFIG });
   const expected = [
     "layout {",
@@ -30,6 +31,20 @@ test("a single role renders one pane with no wrapper", () => {
     "",
   ].join("\n");
   assert.equal(kdl, expected);
+});
+
+test("a single role that IS the hub carries focus", () => {
+  // The one-pane layout is exactly the case where focus matters:
+  // without it the pane has no focus at all, and Zellij opens the
+  // layout with nothing focused. The manifest names the hub, so the
+  // single pane is the hub's and carries focus.
+  const kdl = renderLayout(ROOT, BIN, { roles: ["planner"], config: CONFIG });
+  assert.match(kdl, /pane name="planner: Coordinator"[^\n]*focus=true/);
+});
+
+test("a single role that is NOT the hub carries no focus", () => {
+  const kdl = renderLayout(ROOT, BIN, { roles: ["builder"], config: CONFIG });
+  assert.ok(!kdl.includes("focus"), kdl);
 });
 
 test("several roles render inside a vertical split", () => {

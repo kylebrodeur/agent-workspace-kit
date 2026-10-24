@@ -1,4 +1,4 @@
-<!-- STATUS: VERIFIED 2026-10-22. The output below is captured verbatim from `sh examples/run-demo.sh` (a real run of this checkout). Sandbox paths differ per run; the shape is the contract. -->
+<!-- STATUS: VERIFIED 2026-10-24 on node 24.19.0. The output below is captured verbatim from `sh examples/run-demo.sh` (a real run of this checkout). Sandbox paths differ per run; the shape is the contract. -->
 # The runnable example
 
 No agent is launched and no zellij is required: the example validates a
