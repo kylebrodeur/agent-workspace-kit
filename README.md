@@ -102,7 +102,8 @@ map of this repo's docs for agents.
 
 Where to read next: day-to-day tasks in [docs/how-to.md](docs/how-to.md),
 the full command surface with every error string in
-[docs/RUNBOOK.md](docs/RUNBOOK.md), agent rules in
+[docs/RUNBOOK.md](docs/RUNBOOK.md), moving an existing setup onto a new
+release in [docs/UPGRADING.md](docs/UPGRADING.md), agent rules in
 [AGENTS.md](AGENTS.md).
 
 Verified 2026-10-31 (161 tests passing; see CONTRIBUTING.md for the commands).

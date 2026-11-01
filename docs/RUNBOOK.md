@@ -3,7 +3,8 @@
 
 The full command surface, every manifest key, the error strings and their
 fixes, and the recovery procedures. Task-shaped guidance lives in
-[how-to.md](how-to.md).
+[how-to.md](how-to.md); moving an already-set-up setup onto a newer
+release lives in [UPGRADING.md](UPGRADING.md).
 
 ## The command surface
 

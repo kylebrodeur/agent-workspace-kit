@@ -179,4 +179,5 @@ for the lock file shape and the wait error.
 
 - Day-to-day operation: [how-to.md](how-to.md)
 - Every flag, error string, and recovery procedure: [RUNBOOK.md](RUNBOOK.md)
+- Moving an existing setup onto a newer release: [UPGRADING.md](UPGRADING.md)
 - The runnable example (captured output): [../examples/README.md](../examples/README.md)

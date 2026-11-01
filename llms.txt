@@ -12,6 +12,8 @@
 - [docs/RUNBOOK.md](docs/RUNBOOK.md): the operator's reference: the full
   command surface, every manifest key, every error string with its fix,
   recovery procedures.
+- [docs/UPGRADING.md](docs/UPGRADING.md): moving an already-set-up
+  install, manifest, or live team onto a newer release.
 - [AGENTS.md](AGENTS.md): the boundary as rules an agent obeys.
 - [CONTRIBUTING.md](CONTRIBUTING.md): setup, tests, the prose gate, the
   change bar.
