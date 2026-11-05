@@ -9,8 +9,8 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           # The node floor is the package's own: "engines": { "node":
           # ">=24" }. The family standard is the same, and a CI that
@@ -23,6 +23,6 @@ jobs:
   prose-gate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Deterministic prose gate over the tracked markdown
         run: sh scripts/prose-gate.sh
